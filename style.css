@@ -93,7 +93,7 @@ nav {
 .menu-toggle span {
     width: 25px;
     height: 3px;
-    background: var(--dark);
+    background: var(--white);
     transition: 0.3s;
 }
 
@@ -544,8 +544,6 @@ footer {
 
 
 
-
-
 /* Responsive */
 @media (max-width: 768px) {
     .menu-toggle {
@@ -557,7 +555,7 @@ footer {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background: var(--white);
+        background: #e8609d;
         width: 100%;
         text-align: center;
         transition: 0.3s;
