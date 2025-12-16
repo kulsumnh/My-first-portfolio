@@ -263,6 +263,8 @@ nav {
   display: flex;
   gap: 3rem;
   align-items: flex-start;
+  width: 100%;
+  max-width: 100%;
 }
 .about-content img {
   width: 300px;
@@ -297,8 +299,6 @@ nav {
   .about-content {
     flex-direction: column;
     text-align: center;
-    width: 100%;
-    max-width: 100%;
   }
 
   .about-content img {
