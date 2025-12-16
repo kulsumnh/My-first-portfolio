@@ -1,34 +1,51 @@
-// Responsive Navigation Toggle
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-}
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
 
+/* Toggle hamburger */
 menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    menuToggle.classList.toggle('open');
+
+    // Lock scroll saat menu mobile aktif
+    if (window.innerWidth <= 768) {
+        document.body.style.overflow =
+            navLinks.classList.contains('active') ? 'hidden' : 'auto';
+    }
 });
 
-// Close menu when clicking on a link
+/* Tutup menu saat klik link */
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
+        menuToggle.classList.remove('open');
+        document.body.style.overflow = 'auto';
     });
 });
 
-// Smooth scrolling for all anchor links
+/* Tutup menu klik area luar */
+document.addEventListener('click', (e) => {
+    if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('active');
+        menuToggle.classList.remove('open');
+        document.body.style.overflow = 'auto';
+    }
+});
+
+/* Smooth scroll */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+        document
+            .querySelector(this.getAttribute('href'))
+            .scrollIntoView({ behavior: 'smooth' });
     });
+});
+
+/* Reset saat resize ke desktop */
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        navLinks.classList.remove('active');
+        menuToggle.classList.remove('open');
+        document.body.style.overflow = 'auto';
+    }
 });
