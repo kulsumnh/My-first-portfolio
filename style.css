@@ -327,6 +327,8 @@ nav {
     display: flex;
     justify-content: space-between;
     transition: transform 0.3s, box-shadow 0.3s;
+    flex-wrap: wrap;
+    
 }
 
 .skill-card:hover {
