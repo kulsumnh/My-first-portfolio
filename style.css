@@ -44,7 +44,7 @@ body {
 }
 header {
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.7);
-    background: #ff8dbe;
+    background: #c28dff;
     position: sticky;
     top: 0;
     z-index: 100;
