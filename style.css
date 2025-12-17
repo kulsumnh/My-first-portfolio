@@ -44,7 +44,7 @@ body {
 }
 header {
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.7);
-    background: #c28dff;
+    background: #ff8dbe;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -556,7 +556,7 @@ footer {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background: #e8609d;
+        background: #ff8dbe;
         width: 100%;
         text-align: center;
         transition: 0.3s;
