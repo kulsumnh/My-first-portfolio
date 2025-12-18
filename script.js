@@ -49,6 +49,11 @@ document.querySelectorAll('footer').forEach(el => {
   textObserver.observe(el);
 });
 
+// Observer untuk Icon di About section
+document.querySelectorAll('.icon').forEach(el => {
+  textObserver.observe(el);
+});
+
 // ===== HAMBURGER MENU =====
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
