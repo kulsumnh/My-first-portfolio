@@ -891,109 +891,164 @@ footer.animate {
     .menu-toggle {
         display: flex;
     }
-    .typewriter {
+    body {
+    overflow-x: hidden;
+  }
+  
+  .container {
+    padding: 2rem 1rem;
+    max-width: 100%;
+  }
+  
+  #home {
+    overflow-x: hidden;
+  }
+  
+  .home-content {
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+  
+  .home-text {
+    max-width: 100%;
+    padding-right: 0;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  /* Typewriter text lebih pendek di mobile */
+  .typewriter {
     font-size: 0.9rem;
-    }
-    @keyframes typing {
+    max-width: 100%;
+  }
+  
+  @keyframes typing {
     to {
       width: 100%;
     }
-   }
-    
+  }
+  
   /* Button full width di mobile */
   .cta-buttons {
     width: 100%;
-  }
-  .btn {
-    width: 100%;
-    padding: 0.8rem 1rem;
-    text-align: center;
+    max-width: 100%;
   }
   
+  .btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.8rem 1rem;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .nav-links {
+    color: white;
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background: #ff8dbe;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+    padding: 2rem 0;
+  }
 
-    .nav-links {
-        color: white;
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        flex-direction: column;
-        background: #ff8dbe;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
-        padding: 2rem 0;
-    }
+  .nav-links.active {
+    left: 0;
+  }
 
-    .nav-links.active {
-        left: 0;
-    }
+  .home-content,
+  .about-content {
+    grid-template-columns: 1fr;
+  }
 
-    .home-content,
-    .about-content {
-        grid-template-columns: 1fr;
-    }
+  .profile-img {
+    justify-self: center;
+  }
 
-    .profile-img {
-        justify-self: center;
-    }
+  .home-text h1 {
+    font-size: 2rem;
+  }
 
-    .home-text h1 {
-        font-size: 2rem;
-    }
+  .home-text h2 {
+    font-size: 1.2rem;
+  }
 
-    .home-text h2 {
-        font-size: 1.2rem;
-    }
+  .cta-buttons {
+    flex-direction: column;
+  }
 
-    .cta-buttons {
-        flex-direction: column;
-    }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-links {
-        flex-direction: column;
-        gap: 1rem;
-    }
+  .contact-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
-
-
 
 /* Extra small devices (phones < 375px) */
 @media (max-width: 375px) {
-    .home-text h1 {
-        font-size: 1.8rem;
-    }
-    .home-text h2 {
-        font-size: 1.1rem;
-    }
-    .typewriter {
+  body {
+    overflow-x: hidden;
+  }
+  
+  .container {
+    padding: 2rem 0.5rem;
+  }
+  
+  .home-content {
+    padding: 0 0.5rem;
+  }
+  
+  .home-text h1 {
+    font-size: 1.8rem;
+  }
+  
+  .home-text h2 {
+    font-size: 1.1rem;
+  }
+  
+  .typewriter {
     font-size: 0.85rem;
     white-space: normal;
     border-right: none;
     width: 100%;
-   }
-   @keyframes typing {
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+  
+  @keyframes typing {
     to {
       width: 100%;
     }
   }
-    .profile1-img {
-        width: 70vw;
-    }
-    .btn {
-        width: 100%;
-        text-align: center;
-        padding: 0.8rem 1rem;
-        font-size: 0.9rem;
-    }
-    .cta-buttons {
+  
+  .profile1-img {
+    width: 70vw;
+    max-width: 250px;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .cta-buttons {
     flex-direction: column;
     gap: 0.8rem;
     width: 100%;
+    max-width: 100%;
   }
   
   .student-tag {
@@ -1001,6 +1056,8 @@ footer.animate {
     padding: 0.4rem 0.8rem;
     text-align: center;
     display: block;
+    max-width: 100%;
+    word-wrap: break-word;
   }
 }
 
