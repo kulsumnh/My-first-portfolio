@@ -886,12 +886,12 @@ footer.animate {
 
 
 
-/* Responsive */
+/* ===== RESPONSIVE FIXES ===== */
+
+/* Tablet dan lebih kecil */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
-    body {
+  /* Prevent horizontal scroll */
+  body {
     overflow-x: hidden;
   }
   
